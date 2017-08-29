@@ -12,6 +12,9 @@ a:visited{
    font-family: serif;
    background-image: url(../images/smoke.jpg);
    background-size: cover;
+   min-height: 100vh;
+   height: 100%;
+   position: relative;
 
  }
 
@@ -55,7 +58,7 @@ footer {
   width: 100%;
   background: rgb(234, 234, 245);
   padding: 30px 0px;
-  position: relative;
+  position: absolute;
   bottom: 0%;
   left: 0;
   right: 0;
@@ -115,7 +118,7 @@ button {
    justify-content: space-between;
    align-items: center;
    width: 80%;
-   height: 500px;
+   min-height: 500px;
    margin: 50px;;
    padding: 50px;
  }
@@ -169,7 +172,7 @@ button {
 
 
 #faq-container {
-  width:850px;
+  max-width:850px;
   height: 100%;
   margin-left:auto;
   margin-right:auto;
@@ -183,12 +186,13 @@ button {
 }
 
 #book-container {
-  width:850px;
+  max-width:850px;
   height: 100%;
   margin-left:auto;
   margin-right:auto;
   padding: 50px;
   margin-top: 70px;
+  margin-bottom: 70px;
   background: rgba(202, 1, 1, 0.5);
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -197,13 +201,13 @@ button {
 }
 
 #form-container {
-  width:550px;
+  max-width:550px;
   height: 100%;
   margin-left:auto;
   margin-right:auto;
   padding: 50px;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 150px;
   background: rgba(202, 1, 1, 0.5);
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -226,13 +230,15 @@ button {
 
     header {
 
-  		position: absolute;
+  		position: relative;
 
   	}
 
+    footer {
+      position: static;
+    }
 
 
-  	}
 
   	nav ul, nav:active ul {
 
@@ -262,5 +268,39 @@ button {
   		display: block;
 
   	}
+
+    #row_container {
+      flex-direction: column;
+      float: none;
+		  width: auto;
+    }
+
+    #story {
+      flex-direction: column;
+      float: none;
+		  width: auto;
+    }
+
+    #faq-container {
+      flex-direction: column;
+      float: none;
+		  width: auto;
+
+    }
+
+    #book-container {
+
+        flex-direction: column;
+        float: none;
+  		  width: auto;
+    }
+
+    #form-container {
+
+      flex-direction: column;
+      float: none;
+      width: auto;
+
+    }
 
 }
